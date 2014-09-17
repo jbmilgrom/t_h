@@ -34,12 +34,12 @@ class Terminal
     end
   end
 
-  # enables the setting of price from an instance of Terminal (giving Terminal the necessary functionality without exposing all of Invetory)
+  # enables the setting of price from an instance of Terminal (giving Terminal the necessary functionality without exposing all of Inventory)
   def set_price(item, price)
     Inventory.set_price(item, price)
   end
   
-  # enables the setting deal from an instance of Terminal (giving Terminal the necessary functionality without exposing all of Invetory)
+  # enables the setting deal from an instance of Terminal (giving Terminal the necessary functionality without exposing all of Inventory)
   def set_deal(item, quantity, price)
     Inventory.set_deal(item, quantity, price)
   end
