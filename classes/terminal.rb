@@ -3,12 +3,11 @@ require_relative "../database/inventory.rb"
 class Terminal
 
   def initialize
-    @items = Inventory.inventory.keys
     @counter = {}
   end
 
   def scan(item)
-    if @items.include?(item)
+    if Inventory.inventory.keys.include?(item)
       @counter[item] = 0 unless @counter[item]
       @counter[item] += 1
     else
