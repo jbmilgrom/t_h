@@ -1,9 +1,18 @@
-require_relative "../database/inventory.rb"
-
+  
 class Terminal
 
   def initialize
     @counter = {}
+  end
+
+  # enables setting price from an instance of Terminal (giving Terminal the necessary functionality without exposing all of Inventory)
+  def set_price(item, price)
+    Inventory.set_price(item, price)
+  end
+  
+  # enables setting deal specs from an instance of Terminal (giving Terminal the necessary functionality without exposing all of Inventory)
+  def set_deal(item, quantity, price)
+    Inventory.set_deal(item, quantity, price)
   end
 
   def scan(item)
@@ -11,7 +20,7 @@ class Terminal
       @counter[item] = 0 unless @counter[item]
       @counter[item] += 1
     else
-      puts "error: item not registered in inventory"
+      puts "error: item not registered"
     end
   end
 
@@ -34,13 +43,4 @@ class Terminal
     end
   end
 
-  # enables the setting of price from an instance of Terminal (giving Terminal the necessary functionality without exposing all of Inventory)
-  def set_price(item, price)
-    Inventory.set_price(item, price)
-  end
-  
-  # enables the setting deal from an instance of Terminal (giving Terminal the necessary functionality without exposing all of Inventory)
-  def set_deal(item, quantity, price)
-    Inventory.set_deal(item, quantity, price)
-  end
 end
