@@ -2,7 +2,6 @@ class Inventory
 
   @@inventory = {}
 
-  # inventory can be accessed as a whole outside of class
   def self.contains?(item)
     @@inventory.keys.include?(item)
   end 
