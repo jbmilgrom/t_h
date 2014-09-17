@@ -2,7 +2,7 @@ class Inventory
 
   @@inventory = {}
 
-  # so inventory can be accessed as a whole outside of class
+  # inventory can be accessed as a whole outside of class
   def self.inventory
     @@inventory
   end 
