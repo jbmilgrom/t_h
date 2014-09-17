@@ -16,7 +16,7 @@ class Terminal
   end
 
   def scan(item)
-    if Inventory.inventory.keys.include?(item)
+    if Inventory.contains?(item)
       @counter[item] = 0 unless @counter[item]
       @counter[item] += 1
     else
