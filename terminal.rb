@@ -22,7 +22,7 @@ terminal.scan("B")
 terminal.scan("A")
 terminal.scan("A")
 puts terminal.total
-# puts 32.4
+# puts $32.40
 
 # terminal instance two
 terminal = Terminal.new
@@ -34,7 +34,7 @@ terminal.scan("C")
 terminal.scan("C")
 terminal.scan("C")
 puts terminal.total
-# puts 7.25
+# puts $7.25
 
 # terminal instance three
 terminal = Terminal.new
@@ -43,5 +43,5 @@ terminal.scan("B")
 terminal.scan("C")
 terminal.scan("D")
 puts terminal.total
-# puts 15.4
+# puts $15.40
  

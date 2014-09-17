@@ -29,7 +29,7 @@ class Terminal
     @counter.each do |item, count|
       total += total_per(item, count)
     end
-    return total
+    return dollar_form(total)
   end
 
   def total_per(item, count)
@@ -41,6 +41,10 @@ class Terminal
     else 
       return count * price_per_item
     end
+  end
+
+  def dollar_form(total)
+    "$%.2f" % total
   end
 
 end
