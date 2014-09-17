@@ -1,4 +1,4 @@
-require_relative "./database/inventory.rb"
+require_relative './database/inventory.rb'
 require_relative './classes/terminal.rb'
 
 # Setting per-item prices and deals
