@@ -3,7 +3,7 @@ class Inventory
   @@inventory = {}
 
   def self.contains?(item)
-    @@inventory.keys.include?(item)
+    return true if @@inventory[item]
   end 
 
   def self.set_price(item, price)
